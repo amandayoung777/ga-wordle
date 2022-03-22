@@ -7,20 +7,36 @@ const output1 = document.getElementById('output1');
 
 const outputs = document.getElementsByClassName('outputs');
 
+let chosenWord = "YARNS"
+
+for (const letter of chosenWord) {
+    console.log(letter)
+}
+
+// for (const index in input1) 
+
+// for (let index in letters) {
+//     let guess = document.getElementById("letter1");
+//     output1.textContent = input1.value;
+//     guess.appendChild(output1.textContent)
+// }
+
 input1.addEventListener('change', function() {
     input1.value = input1.value.toUpperCase();
     console.log(input1.value === (letters[0]))
     console.log(letters[0])
     output1.textContent = input1.value;
+    fillGreen();
 
 }
 )
-// function fillGreen() {
-//     const color = document.querySelectorAll('#outputs');
-//     if (input1.value === (letters[0])) {
-//         console.log(input1);
-//     }
-// }
+function fillGreen() {
+    const color = document.querySelector("#outputs");
+    if (input1.value === (letters[0])) {
+        output1.classList.add("correct")
+    }
+}
+fillGreen();
     
 
         
@@ -38,3 +54,5 @@ input1.addEventListener('change', function() {
     //     element.textContent = guess1
     //     console.log(guess1)
     // }
+
+    //list index brackets for loop
