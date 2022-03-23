@@ -1,0 +1,36 @@
+.row {
+    display: flex;
+}
+
+.outputs {
+    border: 1px solid black ;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: white;
+}
+
+.correct {
+    background-color: green;
+}
+
+.output3 {
+    border: 1px solid black ;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+
+.output4 {
+    border: 1px solid black ;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+
+.output5 {
+    border: 1px solid black ;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
