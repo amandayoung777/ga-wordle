@@ -31,6 +31,8 @@ input1.addEventListener('change', function() {
 //move to next line
 //repeat until 6 lines are completed
 
+let newBox = 0;
+
 const button = document.querySelector('button');
 button.addEventListener('click', function(){
     console.log("click");
@@ -40,9 +42,14 @@ button.addEventListener('click', function(){
         const correctWord = chosenWord[index];
         console.log(correctWord);
         const userGuess = input1.value[index];
-        console.log(input1);        
+        console.log(input1);  
+        let box = document.getElementsByClassName("outputs")[newBox]; 
+        console.log(newBox);
+        newBox = newBox+1; 
+        console.log(newBox);    
         if (userGuess === correctWord) {
             console.log("yep");
+            box.classList.add("correct");
             
         }
     } 
