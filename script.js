@@ -6,12 +6,18 @@ console.log(chosenWordSplit);
 
 const input1 = document.getElementById("letter1");
 console.log(input1);
-const guess = input1.value.split("");
-console.log(guess);
+// const guess = input1.value.split("");
+// console.log(guess);
 
+
+let newRow = 0;
 
 //change vs input
 input1.addEventListener('change', function() {
+    let row = document.getElementsByClassName("row")[newRow];
+    console.log(newRow);
+    newRow = newRow+1; 
+    console.log(newRow);
     input1.value = input1.value.toUpperCase();
         for (const index in input1.value) {
         const output = row.querySelectorAll(".outputs")[index];
@@ -21,26 +27,38 @@ input1.addEventListener('change', function() {
     
 }
 )
+//check letter against correct word
+//move to next line
+//repeat until 6 lines are completed
 
 const button = document.querySelector('button');
 button.addEventListener('click', function(){
     console.log("click");
+    for (let index in chosenWord) {
+    // let correctWord = document.createElement('li');
+    // let userGuess = document.createElement('li');
+        const correctWord = chosenWord[index];
+        console.log(correctWord);
+        const userGuess = input1.value[index];
+        console.log(input1);        
+        if (userGuess === correctWord) {
+            console.log("yep");
+            
+        }
+    } 
+
 })
 
-const row = document.getElementsByClassName("row")[0];
+//const rows = document.getElementsByClassName("row");
+//let row = document.getElementsByClassName("row")[0];
 
-for (let index in chosenWord) {
-    let correctWord = document.createElement('li');
-    let userGuess = document.createElement('li');
-    correctWord = chosenWord[index];
-    console.log(correctWord)
-    userGuess = guess[index];
-    console.log(userGuess);
+function fillGreen() {
+    const green = document.querySelectorAll(".outputs");
+   // outputs.classList.add("correct")
+    }
 
-//     if (userGuess[index] == correctWord) {
-//         console.log('yep');
-//     }
- }
+
+
 
 
 //works above here
@@ -56,11 +74,6 @@ for (let index in chosenWord) {
 
 
  
-function fillGreen() {
-    const green = document.querySelectorAll(".outputs");
-    outputs.classList.add("correct")
-    }
-
 
 
 // for (const letter of chosenWord) {
