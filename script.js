@@ -10,6 +10,22 @@ const guess = input1.value.split("");
 console.log(guess);
 
 
+//change vs input
+input1.addEventListener('change', function() {
+    input1.value = input1.value.toUpperCase();
+        for (const index in input1.value) {
+        const output = row.querySelectorAll(".outputs")[index];
+        output.textContent = input1.value[index];
+        console.log(output.textContent)
+    }
+    
+}
+)
+
+const button = document.querySelector('button');
+button.addEventListener('click', function(){
+    console.log("click");
+})
 
 const row = document.getElementsByClassName("row")[0];
 
@@ -20,29 +36,23 @@ for (let index in chosenWord) {
     console.log(correctWord)
     userGuess = guess[index];
     console.log(userGuess);
-}
 
-input1.addEventListener('input', function() {
-    input1.value = input1.value.toUpperCase();
-        for (const index in input1.value) {
-        const output = row.querySelectorAll(".outputs")[index];
-        output.textContent = input1.value[index];
-    }
-}
-)
+//     if (userGuess[index] == correctWord) {
+//         console.log('yep');
+//     }
+ }
+
+
 //works above here
-let button = document.querySelector('button');
 
-button.addEventListener('click', function(){
-    console.log("click");
 
-    for (let index in guess) {
-    if (guess[index] === chosenWordSplit[index]) {
-        console.log("yes");
-        fillGreen();
-    }
-}
-}) 
+//     for (let index in guess) {
+//     if (guess[index] === chosenWordSplit[index]) {
+//         console.log("yes");
+//         fillGreen();
+//     }
+// }
+
 
 
  
