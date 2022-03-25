@@ -63,7 +63,7 @@ button.addEventListener("click", function () {
     gameOver();
   } else if (newRow == 6 && correctLetterCount !== 5) {
     console.log("you lose");
-    window.alert("YOU LOSE! Game over :(")
+    window.alert("YOU LOSE! Game over :( The correct word is " + chosenWord)
     gameOver();
   } else {
     correctLetterCount = 0;
