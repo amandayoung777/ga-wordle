@@ -61,8 +61,9 @@ button.addEventListener("click", function () {
     console.log("you win!");
     window.alert("YOU WIN!");
     gameOver();
-  } else if (newRow == 7 && correctLetterCount !== 5) {
+  } else if (newRow == 6 && correctLetterCount !== 5) {
     console.log("you lose");
+    window.alert("YOU LOSE! Game over :(")
     gameOver();
   } else {
     correctLetterCount = 0;
