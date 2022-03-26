@@ -22,13 +22,6 @@ input1.addEventListener("change", function () {
   }
 });
 
-input1.addEventListener('input', function() {
-    if (input1[index] !== 5) {
-        console.log("nah")
-        paragraph.textContent = "Your guess must have 5 letters";
-    }
-})
-
 
 let newBox = 0;
 let correctLetterCount = 0;
@@ -36,6 +29,8 @@ let correctLetterCount = 0;
 const button = document.querySelector("button");
 button.addEventListener("click", function () {
   console.log("click");
+
+  
   for (let index in chosenWord) {
     const correctLetter = chosenWord[index];
     console.log(correctLetter);
@@ -70,6 +65,7 @@ button.addEventListener("click", function () {
     console.log("reset");
   }
 });
+
 
 function gameOver() {
     input1.disabled = true;
