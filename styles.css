@@ -1,17 +1,27 @@
+
+
 body {
+    background-color: rgb(221, 219, 219);
     font-family: helvetica;
-    max-width: 900px;
 }
 
-p {
-    margin: 10px;
+.container {
+    text-align: center;
+    max-width: auto;
+    align-self: auto;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
+
+
 .row {
     display: flex;
 }
 
 .outputs {
-    border: 1px solid black ;
+    border: 1px solid gray ;
     height: 50px;
     width: 50px;
     margin: 10px;
@@ -20,6 +30,7 @@ p {
     text-align: center; 
     vertical-align: middle;
     font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 
@@ -35,10 +46,19 @@ p {
     background-color: rgb(216, 78, 78);
 }
 
+button {
+    border-radius: 5px;
+}
 
 #enter {
     height: 30px;
     max-width: auto;
+    border-color: gray;
+    margin: auto;
+}
+
+input {
+    border-color: gray;
 }
 
 #letter1 {
